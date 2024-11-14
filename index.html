@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css"/>
+    <script language="JavaScript" src="./scripts/script.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./assets/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+    <div id="calcContainer">
+        <h1>Calculator</h1>
+        <p id="operationHistory" class="displayOperator"></p>
+        <p id="displayBox" class="displayBox">0</p>
+        <table id="calcTable">
+            <tr>
+                <td><button onclick="percentCalc()">%</button></td>
+                <td><button onclick="clearEntry()">CE</button></td>
+                <td><button onclick="clearAll()">C</button></td>
+                <td><button onclick="removeLast()">⇦</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="reciprocal()">¹∕ₓ</button></td>
+                <td><button onclick="square()">𝑥²</button></td>
+                <td><button onclick="sqrt()">√𝑥</button></td>
+                <td><button id="divideOp" value="/" class="operator" onclick="inputNumber('/')">÷</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="inputNumber(7)">7</button></td>
+                <td><button onclick="inputNumber(8)">8</button></td>
+                <td><button onclick="inputNumber(9)">9</button></td>
+                <td><button id="multiplyOp" value="*" class="operator" onclick="inputNumber('*')">×</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="inputNumber(4)">4</button></td>
+                <td><button onclick="inputNumber(5)">5</button></td>
+                <td><button onclick="inputNumber(6)">6</button></td>
+                <td><button id="subtractOp" value="-" class="operator" onclick="inputNumber('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="inputNumber(1)">1</button></td>
+                <td><button onclick="inputNumber(2)">2</button></td>
+                <td><button onclick="inputNumber(3)">3</button></td>            
+                <td><button id="addOp" value="+" class="operator" onclick="inputNumber('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="toggleSign()">±</button></td>
+                <td><button onclick="inputNumber(0)">0</button></td>
+                <td><button id="decimal" value="." onclick="inputNumber('.')">.</button></td>
+                <td colspan="2"><button value="=" class="operator" id="equals" onclick="inputNumber('=')">=</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
